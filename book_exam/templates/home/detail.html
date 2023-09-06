@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block content%}
+    <div class="row">
+        <img src="{{ MEDIA_URL }}{{bk.cover}}" style="height:300px">
+        <h1>书名：{{bk.name}}</h1>
+        <h3>价格:{{bk.price}}</h3>
+{#        <h3>作者：{{bk.author}}</h3>#}
+        <h3>出版社：{{bk.publish}}</h3>
+        <h3>豆瓣评分：{{bk.rating}}</h3>
+        <h3>地址：<a target="_blank" href={{bk.url}}>{{bk.url}}</a></h3>
+        <h3>介绍：{{bk.introduction}}</h3>
+    </div>
+{%endblock%}

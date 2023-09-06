@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block content%}
+    <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+    {%  csrf_token %}
+        <label>数据上传到数据库</label>
+        <input class="form-control" type="file" name="file">
+        <button  class="btn btn-primary" type="submit">上传</button>
+    </form>
+{%endblock%}
